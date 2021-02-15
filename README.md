@@ -16,13 +16,13 @@ To build  docker image containing the application run `make docker-image`, this 
 called `zetsub0u/objcache` and tagged with the git describe at build time.
 
 ## Running it
-`make run` or `make run-darwin` to start the server directly
+* `make run` or `make run-darwin` to start the server directly
 or
-`make docker-run` to run it inside a container
+* `make docker-run` to run it inside a container
 
 ## Endpoints
-`GET /object`: returns an object from the store
-`PUT /object/:obj`: receives an object (int) in the url
-`POST /object`: receives a json object in the body. (ex.`{"obj": 5}`)
-`GET /swagger/index.html`: auto generated swagger docs ui: http://localhost:8080/swagger/index.html
+* `GET /object`: returns an object from the store
+* `PUT /object/:obj`: receives an object (int) in the url
+* `POST /object`: receives a json object in the body. (ex.`{"obj": 5}`)
+* `GET /swagger/index.html`: auto generated swagger docs ui: http://localhost:8080/swagger/index.html
 
