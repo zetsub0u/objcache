@@ -1,0 +1,47 @@
+definitions:
+  http.CreateReq:
+    properties:
+      obj:
+        type: integer
+    type: object
+info:
+  contact: {}
+paths:
+  /object:
+    get:
+      description: get an object from the store tha can be released later
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: integer
+      summary: get object
+    post:
+      consumes:
+      - application/json
+      description: create  an object into the store
+      parameters:
+      - description: object to create
+        in: body
+        name: req
+        required: true
+        schema:
+          $ref: '#/definitions/http.CreateReq'
+      responses:
+        "200":
+          description: ""
+      summary: create a new object in the store
+  /object/{obj}:
+    put:
+      description: return an object into the store
+      parameters:
+      - description: object to return
+        in: path
+        name: obj
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: ""
+      summary: return the object
+swagger: "2.0"
